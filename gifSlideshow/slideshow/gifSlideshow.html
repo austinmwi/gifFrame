@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+	<!--
+		Supersized - Fullscreen Slideshow jQuery Plugin
+		Version : 3.2.7
+		Site	: www.buildinternet.com/project/supersized
+		
+		Author	: Sam Dunn
+		Company : One Mighty Roar (www.onemightyroar.com)
+		License : MIT License / GPL License
+	-->
+
+	<head>
+
+		<title>Supersized - Full Screen Background Slideshow jQuery Plugin</title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		
+		<link rel="stylesheet" href="css/supersized.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="theme/supersized.shutter.css" type="text/css" media="screen" />
+		
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.easing.min.js"></script>
+		
+		<script type="text/javascript" src="js/supersized.3.2.7.min.js"></script>
+		<script type="text/javascript" src="theme/supersized.shutter.min.js"></script>
+		
+		<script type="text/javascript">
+			
+			jQuery(function($){
+				
+				$.supersized({
+				
+					// Functionality
+					slideshow               :   1,			// Slideshow on/off
+					autoplay				:	1,			// Slideshow starts playing automatically
+					start_slide             :   1,			// Start slide (0 is random)
+					stop_loop				:	0,			// Pauses slideshow on last slide
+					random					: 	1,			// Randomize slide order (Ignores start slide)
+					slide_interval          :   20000,		// Length between transitions
+					transition              :   1, 			// 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
+					transition_speed		:	2000,		// Speed of transition
+					new_window				:	1,			// Image links open in new window/tab
+					pause_hover             :   0,			// Pause slideshow on hover
+					keyboard_nav            :   1,			// Keyboard navigation on/off
+					performance				:	2,			// 0-Normal, 1-Hybrid speed/quality, 2-Optimizes image quality, 3-Optimizes transition speed // (Only works for Firefox/IE, not Webkit)
+					image_protect			:	1,			// Disables image dragging and right click with Javascript
+															   
+					// Size & Position						   
+					min_width		        :   0,			// Min width allowed (in pixels)
+					min_height		        :   0,			// Min height allowed (in pixels)
+					vertical_center         :   1,			// Vertically center background
+					horizontal_center       :   1,			// Horizontally center background
+					fit_always				:	0,			// Image will never exceed browser width or height (Ignores min. dimensions)
+					fit_portrait         	:   1,			// Portrait images will not exceed browser height
+					fit_landscape			:   0,			// Landscape images will not exceed browser width
+															   
+					// Components							
+					slide_links				:	'blank',	// Individual links for each slide (Options: false, 'num', 'name', 'blank')
+					thumb_links				:	0,			// Individual thumb links for each slide
+					thumbnail_navigation    :   0,			// Thumbnail navigation
+					slides 					:  	[			// Slideshow Images
+												{image : '../../GIFs/1.gif'},
+												{image : '../../GIFs/2.gif'},
+												{image : '../../GIFs/3.gif'},
+												{image : '../../GIFs/4.gif'},
+												{image : '../../GIFs/5.gif'},
+												{image : '../../GIFs/6.gif'},
+												{image : '../../GIFs/7.gif'},
+												{image : '../../GIFs/8.gif'},
+												{image : '../../GIFs/9.gif'},
+												{image : '../../GIFs/10.gif'},
+												{image : '../../GIFs/11.gif'},
+												{image : '../../GIFs/12.gif'},
+												{image : '../../GIFs/13.gif'},
+												{image : '../../GIFs/14.gif'},
+												{image : '../../GIFs/15.gif'},
+												{image : '../../GIFs/16.gif'},
+												{image : '../../GIFs/17.gif'},
+												{image : '../../GIFs/18.gif'},
+												{image : '../../GIFs/19.gif'},
+												{image : '../../GIFs/20.gif'},
+												{image : '../../GIFs/21.gif'},
+												{image : '../../GIFs/22.gif'},
+												{image : '../../GIFs/23.gif'},
+												{image : '../../GIFs/24.gif'},
+												{image : '../../GIFs/25.gif'},
+												{image : '../../GIFs/26.gif'},
+												{image : '../../GIFs/27.gif'},
+												{image : '../../GIFs/28.gif'},
+												{image : '../../GIFs/29.gif'},
+												{image : '../../GIFs/30.gif'},
+												{image : '../../GIFs/31.gif'},
+												{image : '../../GIFs/32.gif'},
+												{image : '../../GIFs/33.gif'},
+												{image : '../../GIFs/34.gif'},
+												{image : '../../GIFs/35.gif'},
+												{image : '../../GIFs/36.gif'},
+												{image : '../../GIFs/37.gif'},
+												{image : '../../GIFs/38.gif'},
+												{image : '../../GIFs/39.gif'},
+												{image : '../../GIFs/40.gif'},
+												{image : '../../GIFs/41.gif'},
+												{image : '../../GIFs/42.gif'},
+												{image : '../../GIFs/43.gif'},
+												{image : '../../GIFs/44.gif'},
+												{image : '../../GIFs/45.gif'},
+												{image : '../../GIFs/46.gif'},
+												{image : '../../GIFs/47.gif'},
+												{image : '../../GIFs/48.gif'},
+												{image : '../../GIFs/49.gif'},
+												{image : '../../GIFs/50.gif'},
+												{image : '../../GIFs/51.gif'},
+												{image : '../../GIFs/52.gif'},
+												{image : '../../GIFs/53.gif'},
+												{image : '../../GIFs/54.gif'},
+												{image : '../../GIFs/55.gif'},
+												{image : '../../GIFs/56.gif'},
+												{image : '../../GIFs/57.gif'},
+												{image : '../../GIFs/58.gif'},
+												{image : '../../GIFs/59.gif'},
+												{image : '../../GIFs/60.gif'},
+												{image : '../../GIFs/61.gif'},
+												{image : '../../GIFs/62.gif'},
+												{image : '../../GIFs/63.gif'},
+												{image : '../../GIFs/64.gif'},
+												{image : '../../GIFs/65.gif'},
+												{image : '../../GIFs/66.gif'},
+												{image : '../../GIFs/67.gif'},
+												{image : '../../GIFs/68.gif'},
+												{image : '../../GIFs/69.gif'},
+												{image : '../../GIFs/70.gif'},
+												{image : '../../GIFs/71.gif'},
+												{image : '../../GIFs/72.gif'},
+												{image : '../../GIFs/73.gif'},
+												{image : '../../GIFs/74.gif'},
+												{image : '../../GIFs/75.gif'},
+												{image : '../../GIFs/76.gif'},
+												{image : '../../GIFs/77.gif'},
+												{image : '../../GIFs/78.gif'},
+												{image : '../../GIFs/79.gif'},
+												{image : '../../GIFs/80.gif'},
+												{image : '../../GIFs/81.gif'},
+												{image : '../../GIFs/82.gif'},
+												{image : '../../GIFs/83.gif'},
+												{image : '../../GIFs/84.gif'},
+												{image : '../../GIFs/85.gif'},
+												{image : '../../GIFs/86.gif'},
+												{image : '../../GIFs/87.gif'},
+												{image : '../../GIFs/88.gif'},
+												{image : '../../GIFs/89.gif'},
+												{image : '../../GIFs/90.gif'},
+												{image : '../../GIFs/91.gif'},
+												{image : '../../GIFs/92.gif'},
+												{image : '../../GIFs/93.gif'},
+												{image : '../../GIFs/94.gif'},
+												{image : '../../GIFs/95.gif'},
+												{image : '../../GIFs/96.gif'},
+												{image : '../../GIFs/97.gif'},
+												{image : '../../GIFs/98.gif'},
+												{image : '../../GIFs/99.gif'},
+												{image : '../../GIFs/100.gif'},
+												{image : '../../GIFs/101.gif'},
+												{image : '../../GIFs/102.gif'},
+												{image : '../../GIFs/103.gif'},
+												{image : '../../GIFs/104.gif'},
+												{image : '../../GIFs/105.gif'},
+												{image : '../../GIFs/106.gif'},
+												{image : '../../GIFs/107.gif'},
+												{image : '../../GIFs/108.gif'},
+												{image : '../../GIFs/109.gif'},
+												{image : '../../GIFs/110.gif'},
+												{image : '../../GIFs/111.gif'},
+												{image : '../../GIFs/112.gif'},
+												{image : '../../GIFs/113.gif'},
+												{image : '../../GIFs/114.gif'},
+												{image : '../../GIFs/115.gif'}
+
+
+														
+												],
+												
+					// Theme Options			   
+					progress_bar			:	0,			// Timer for each slide							
+					mouse_scrub				:	0
+					
+				});
+		    });
+		    
+		</script>
+		
+	</head>
+	
+	<style type="text/css">
+		ul#demo-block{ margin:0 15px 15px 15px; }
+			ul#demo-block li{ margin:0 0 10px 0; padding:10px; display:inline; float:left; clear:both; color:#aaa; background:url('img/bg-black.png'); font:11px Helvetica, Arial, sans-serif; }
+			ul#demo-block li a{ color:#eee; font-weight:bold; }
+	</style>
+
+<body>
+
+
+	
+	<div id="thumb-tray" class="load-item">
+		<div id="thumb-back"></div>
+		<div id="thumb-forward"></div>
+	</div>
+</body>
+</html>
